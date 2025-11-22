@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Premios de la sala Barbera - Ruleta</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>Premios de la sala Barbera</h1>
+        </header>
+
+        <main>
+            <section class="left">
+                <div class="board">
+                    <div class="ruleta-wrap">
+                        <img src="flecha.svg" class="flecha" alt="flecha" />
+                        <canvas id="ruleta" width="520" height="520"></canvas>
+                    </div>
+                    <div class="controls">
+                        <button id="btnGirar" class="girar">GIRAR</button>
+                        <div id="resultado" class="resultado"></div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="right">
+                <div class="panel">
+                    <h2>Personalizar premios</h2>
+                    <label>Cantidad de opciones:
+                        <input id="cantidad" type="number" min="2" max="12" value="5">
+                    </label>
+                    <div id="listaPremios" class="lista"></div>
+                    <div class="panel-buttons">
+                        <button id="btnAplicar">Aplicar cambios</button>
+                        <button id="btnReset">Restablecer</button>
+                    </div>
+                    <p class="nota">Si un premio incluye la palabra <strong>MINA</strong>, sonará el nuevo audio y aparecerá una pequeña animación en el segmento.</p>
+                </div>
+            </aside>
+        </main>
+
+        <audio id="minaSound" src="techismina (mp3cut.net).mp3" preload="auto"></audio>
+        <audio id="explosionSound" src="https://www.soundjay.com/buttons/sounds/mine-explosion-01.mp3" preload="auto"></audio>
+
+    </div>
+
+    <script src="script.js"></script>
+
+<audio id="techiesSound" src="techismina (mp3cut.net).mp3" preload="auto"></audio>
+</body>
+</html>
